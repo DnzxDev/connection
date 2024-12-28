@@ -30,19 +30,15 @@ quantum.prepare('quantum_garage/getVehiclesWithChassis', 'select * from user_veh
 function getUserIdByDiscordId(discordId)
     local discordIdentifier = 'discord:' .. discordId
     local user_id = nil
-
-    -- Criar uma corrotina para esperar o retorno da consulta
     Citizen.CreateThread(function()
         MySQL.Async.fetchScalar('SELECT user_id FROM user_ids WHERE identifier = @identifier', {
             ['@identifier'] = discordIdentifier
         }, function(result)
-            user_id = result  -- Salva o resultado na variável user_id
+            user_id = result  
         end)
     end)
-
-    -- Espera até que o resultado seja atribuído (usando um loop de espera)
     while user_id == nil do
-        Citizen.Wait(0)  -- Espera um quadro para evitar travamentos
+        Citizen.Wait(0)  
     end
 
     return user_id
