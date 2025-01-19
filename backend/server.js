@@ -20,7 +20,7 @@ app.post('/addVehicle', (req, res) => {
     const { discordId, carro } = req.body;
 
     if (!discordId || !carro) {
-        return res.status(400).json({ message: 'Precisa da porra do discord id e do vehicle' });
+        return res.status(400).json({ message: 'Precisa do discord id e do vehicle' });
     }
     TriggerEvent('website:Addcar', discordId, carro);
 
