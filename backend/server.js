@@ -32,7 +32,7 @@ app.post('/addHome', (req, res) => {
     const { discordId, home } = req.body;
 
     if (!discordId || !home) {
-        return res.status(400).json({ message: 'Precisa da porra do discord id e do home' });
+        return res.status(400).json({ message: 'Precisa do discord id e do home' });
     }
     TriggerEvent('website:AddHome', discordId, home);
 
@@ -44,7 +44,7 @@ app.post('/setVip', (req, res) => {
     const { discordId, index } = req.body;
 
     if (!discordId || !index) {
-        return res.status(400).json({ message: 'Precisa da porra do discord id' });
+        return res.status(400).json({ message: 'Precisa do discord id' });
     }
     TriggerEvent('website:SetVip', discordId, index);
 
