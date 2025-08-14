@@ -1,26 +1,27 @@
-# 🎁 Sistema de Entrega de Itens VIP - FiveM
+# 🎁 Basic VIP Item Delivery System - FiveM
 
-Este projeto conecta um site de compras com seu servidor FiveM, permitindo a entrega automática de **itens VIP** adquiridos pelos jogadores. Ele utiliza um back-end em **Node.js** (Express) para receber os pedidos e um script em **Lua** para adicionar os itens diretamente ao inventário no servidor.
+This project connects an online store with your FiveM server, enabling automatic delivery of **VIP items** purchased by players.  
+It uses a **Node.js** (Express) backend to receive purchase requests and a **Lua** script to add the items directly to the in-game inventory.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
 ### 🖥️ Back-End (Node.js)
-- **[Express](https://expressjs.com/)**: Framework web para lidar com rotas HTTP.
-- **[body-parser](https://www.npmjs.com/package/body-parser)**: Middleware para ler dados do corpo das requisições.
-- **[mysql2](https://www.npmjs.com/package/mysql2)**: Cliente MySQL moderno para Node.js.
-- **[cors](https://www.npmjs.com/package/cors)**: Middleware para habilitar requisições CORS de domínios externos.
+- **[Express](https://expressjs.com/)**: Web framework for handling HTTP routes.
+- **[body-parser](https://www.npmjs.com/package/body-parser)**: Middleware to parse request body data.
+- **[mysql2](https://www.npmjs.com/package/mysql2)**: Modern MySQL client for Node.js.
+- **[cors](https://www.npmjs.com/package/cors)**: Middleware to enable CORS requests from external domains.
 
 ### 🎮 FiveM Server (Lua)
-- Script em Lua conectado ao banco de dados e ao servidor, responsável por entregar os itens aos jogadores.
+- Lua script connected to the database and server, responsible for delivering items to players.
 
 ---
 
-## 📦 Funcionalidades
+## 📦 Features
 
-- Conexão segura entre o site e o servidor.
-- API HTTP para registrar compras de itens VIP.
-- Verificação de existência do jogador e entrega automatizada.
-- Registro em banco de dados das entregas realizadas.
-- Otimizado para uso com inventários customizados.
+- Secure connection between the website and the server.
+- HTTP API to register VIP item purchases.
+- Checks if the player exists and delivers items automatically.
+- Records all deliveries in the database.
+- Optimized for use with custom inventory systems.
